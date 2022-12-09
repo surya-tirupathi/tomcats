@@ -56,8 +56,7 @@ pipeline {
             steps {
                 rtUpload (
                      serverId: 'artifact_server'
-                     buildName: 'holyFrog',
-                     buildNumber: '42',)
+                       )
             }
         }
             
