@@ -52,25 +52,7 @@ pipeline {
                 sh ('mvn install');
             }
         }
-        stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
-            steps {
-          rtUpload (
-    serverId: 'Artifactory-1',
-    spec: '''{
-          "files": [
-            {
-              "pattern": "bazinga/*froggy*.zip",
-              "target": "bazinga-repo/froggy-files/"
-            }
-         ]
-    }''',
- 
-    uildName: 'holyFrog',
-    buildNumber: '42',
-    
-)
-            }
-        }
+
             
          stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
