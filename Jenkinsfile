@@ -54,7 +54,10 @@ pipeline {
         }
         stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
             steps {
-                def server = Artifactory.server 'artifact_server'
+                rtUpload (
+                     serverId: 'artifact_server'
+                     buildName: 'holyFrog',
+                     buildNumber: '42',)
             }
         }
             
