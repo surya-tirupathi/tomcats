@@ -54,9 +54,21 @@ pipeline {
         }
         stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
             steps {
-                rtUpload (
-                     serverId: 'artifact_server'
-                       )
+          rtUpload (
+    serverId: 'Artifactory-1',
+    spec: '''{
+          "files": [
+            {
+              "pattern": "bazinga/*froggy*.zip",
+              "target": "bazinga-repo/froggy-files/"
+            }
+         ]
+    }''',
+ 
+    uildName: 'holyFrog',
+    buildNumber: '42',
+    
+)
             }
         }
             
