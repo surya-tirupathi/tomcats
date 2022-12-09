@@ -13,7 +13,13 @@
   <sonar.productkey>ashok1016</sonar.productkey>
   <sonar.login>3146f08c6be0168602832bf1efb5746e8b346d27</sonar.login>
   </properties>
- 
+ <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0nbmrdjnvdlh-artifactory-primary-0-releases</name>
+        <url>https://sumanthsai.jfrog.io/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
